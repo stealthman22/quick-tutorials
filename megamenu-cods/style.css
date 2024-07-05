@@ -96,7 +96,7 @@ body {
 	width: 100%;
 	background: var(--dropdown-bg);
 	box-shadow: 0rem 0.2rem 0.5rem var(--shadow);
-	/* clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); */
+	clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 	transition: all 0.5s ease-in;
 }
 
@@ -104,4 +104,83 @@ body {
 	display: grid;
 	/* Got to understand this */
 	grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+	gap: 1rem;
+	padding: 2rem;
+}
+
+.nav_list_menu:hover ion-icon {
+	transition: all 0.5s ease-in;
+	transform: rotate(180deg);
+}
+
+/* Shows the nav */
+.nav_list_menu:hover .dropdown {
+	clip-path: polygon(0 0, 100% 0, 100% 102%, 0 102%);
+}
+
+.item-list {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	margin: 3rem 0;
+}
+
+.item-img {
+	width: 4rem;
+	height: 4rem;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--secondary);
+}
+
+.item-list-info {
+	position: relative;
+	width: 100%;
+}
+
+.info-badge {
+	position: absolute;
+	right: 1rem;
+	top: 0;
+	background: var(--badge-bg);
+	padding: 0.1rem 0.5rem;
+	color: var(--badge-text);
+}
+
+@media (max-width: 730px) {
+	.nav_toggle {
+		display: block;
+	}
+	.nav_menu {
+		position: absolute;
+		top: var(--nav-height);
+		left: 0;
+		width: 100%;
+		background: var(--dropdown-bg);
+		/* display: none; */
+	}
+	.nav_menu.active {
+		display: block;
+	}
+	.nav_list {
+		display: block;
+		margin: 2rem 0;
+		text-align: center;
+	}
+	.nav_link {
+		padding: 0 2rem;
+		display: flex;
+		justify-content: space-between;
+	}
+	.dropdown {
+		top: 0;
+		position: absolute;
+		clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+		box-shadow: none;
+		/* height: 0; */
+		text-align: start;
+		transition: all 0.5s ease-in;
+	}
 }
