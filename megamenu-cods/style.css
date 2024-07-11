@@ -96,8 +96,9 @@ body {
 	width: 100%;
 	background: var(--dropdown-bg);
 	box-shadow: 0rem 0.2rem 0.5rem var(--shadow);
-	clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+	/* clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); */
 	transition: all 0.5s ease-in;
+	display: none;
 }
 
 .dropdown-inner {
@@ -113,7 +114,7 @@ body {
 }
 
 .nav_list_menu:hover .dropdown {
-	clip-path: polygon(0 0, 100% 0, 100% 102%, 0 102%);
+	/* clip-path: polygon(0 0, 100% 0, 100% 102%, 0 102%); */
 }
 
 .item-list {
@@ -160,6 +161,7 @@ body {
 		background: var(--dropdown-bg);
 		display: none;
 	}
+	/*  Controls the addition of the active class on the main navigation menu */
 	.nav_menu.active {
 		display: block;
 	}
@@ -173,10 +175,11 @@ body {
 		display: flex;
 		justify-content: space-between;
 	}
+
 	.dropdown {
 		top: 0;
 		position: relative;
-		clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+		/* clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); */
 		box-shadow: none;
 		height: 0;
 		text-align: start;
