@@ -98,7 +98,10 @@ body {
 	box-shadow: 0rem 0.2rem 0.5rem var(--shadow);
 	/* clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); */
 	transition: all 0.5s ease-in;
-	display: none;
+
+	/* new method */
+	visibility: hidden;
+	cursor: pointer;
 }
 
 .dropdown-inner {
@@ -113,8 +116,10 @@ body {
 	transform: rotate(180deg);
 }
 
+/* When .nav_list_menu: is hovered, .dropdown will become visible */
 .nav_list_menu:hover .dropdown {
 	/* clip-path: polygon(0 0, 100% 0, 100% 102%, 0 102%); */
+	visibility: visible;
 }
 
 .item-list {
